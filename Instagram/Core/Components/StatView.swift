@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct StatView: View {
+    var amount : Int
+    var title : String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("\(amount)")
+                .font(.subheadline)
+                .fontWeight(.semibold)
+            Text(title)
+                .font(.footnote)
+        }
     }
 }
 
 #Preview {
-    StatView()
+    StatView(amount: 123, title: "Posts")
 }
